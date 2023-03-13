@@ -11,7 +11,10 @@ func main() {
 	fs := http.FileServer(http.Dir("./static"))
     mux.HandleFunc("/hello", hello)
     mux.HandleFunc("/headers", headers)
-	mux.Handle("/", fs)
+
+	// without striping the /static/ preix for static urls, the server will treat
+	// /static as a folder in the route of the filesystem
+	mux.Handle("/static/", http.StripPrefix("/static/", fs)
 	srv := &http.Server{
 		Addr: 	":8090",
 		Handler: 	mux,
