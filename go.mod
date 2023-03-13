@@ -1,3 +1,3 @@
-module sam.bartlett/m
+module sam.bartlett/server
 
 go 1.20
