@@ -7,10 +7,6 @@ import (
 	"time"
 )
 
-// func base(w http.ResponseWriter, r *http.Request) {
-//
-//}
-
 func hello(w http.ResponseWriter, req *http.Request) {
 
 	// All go htt.Request objects have a built in context handler
