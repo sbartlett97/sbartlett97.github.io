@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+	"path/filepath"	
+	"html/template"
 )
 
 func hello(w http.ResponseWriter, req *http.Request) {
@@ -43,4 +45,12 @@ func headers(w http.ResponseWriter, req *http.Request) {
             fmt.Fprintf(w, "%v: %v\n", name, h)
         }
     }
+}
+
+func serveTemplate(w http.ResponseWriter, req *http.Request){
+	lp := filepath.Join("templates", "layout.html")
+	fp := filepath.Join("templates", filepath.Clean(r.URL.Path))
+
+	tmpl, _ := template.ParseFiles(lp, fp)
+	tmpl.ExecuteTemplate(w, "layout", nil)
 }
