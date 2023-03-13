@@ -15,7 +15,7 @@ func main() {
 
 	// without striping the /static/ preix for static urls, the server will treat
 	// /static as a folder in the route of the filesystem
-	mux.Handle("/static/", http.StripPrefix("/static/", fs)
+	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	mux.HandleFunc("/", serveTemplate)
 	srv := &http.Server{

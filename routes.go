@@ -49,7 +49,7 @@ func headers(w http.ResponseWriter, req *http.Request) {
 
 func serveTemplate(w http.ResponseWriter, req *http.Request){
 	lp := filepath.Join("templates", "layout.html")
-	fp := filepath.Join("templates", filepath.Clean(r.URL.Path))
+	fp := filepath.Join("templates", filepath.Clean(req.URL.Path))
 
 	tmpl, _ := template.ParseFiles(lp, fp)
 	tmpl.ExecuteTemplate(w, "layout", nil)
