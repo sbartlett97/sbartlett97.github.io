@@ -13,13 +13,13 @@ import (
 
 func hello(w http.ResponseWriter, req *http.Request) {
 
-	ctx := r.Context()
+	ctx := req.Context()
 	fmt.Println("[server]: Hello handler started")
 	
 	defer fmt.Println("[server]: Hello handler ended")
 
 	select {
-	case <- time.after(10*time.second):
+	case <- time.After(10 * time.Second):
 		fmt.Fprintf(w, "hello\n")
 	case <-ctx.Done():
 
