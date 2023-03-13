@@ -8,10 +8,10 @@ import (
 func main() {
 
 	mux := http.NewServeMux()
-
+	fs := http.FileServer(http.Dir("./static"))
     mux.HandleFunc("/hello", hello)
     mux.HandleFunc("/headers", headers)
-	mux.HandleFunc("/", http.FileServer(http.Dir("./static")))
+	mux.Handle("/", fs)
 	srv := &http.Server{
 		Addr: 	":8090",
 		Handler: 	mux,
