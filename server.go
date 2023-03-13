@@ -10,11 +10,14 @@ func main() {
 
     mux.HandleFunc("/hello", hello)
     mux.HandleFunc("/headers", headers)
-
+	mux.HandleFunc("/", http.FileServer(http.Dir("./static")))
 	srv := &http.Server{
 		Addr: 	":8090",
 		Handler: 	mux,
 	}
 
-    srv.ListenAndServe()
+    err := srv.ListenAndServe()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
