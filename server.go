@@ -21,7 +21,7 @@ func main() {
 	StaticDir = os.Getenv("STATIC_DIR")
 
 	mux := http.NewServeMux()
-	fs := http.FileServer(http.Dir(StaticDir))
+	fs := http.FileServer(http.Dir("./" + StaticDir))
 
     mux.HandleFunc("/hello", hello)
     mux.HandleFunc("/headers", headers)
