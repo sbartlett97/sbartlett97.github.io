@@ -9,15 +9,6 @@ import (
 	"html/template"
 )
 
-var (
-	LayoutPath string 
-)
-
-// globally accessible to main package so we don't need to keep 
-// initialising the path as it will not change between runs of the code
-LayoutPath = filepath.Join("templates", "layout.html")
-
-
 func hello(w http.ResponseWriter, req *http.Request) {
 
 	// All go htt.Request objects have a built in context handler

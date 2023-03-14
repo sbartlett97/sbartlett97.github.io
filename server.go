@@ -3,12 +3,24 @@ package main
 import (
     "net/http"
 	"log"
+	"os"
 )
+
+var (
+	StaticDir string
+	LayoutPath string 
+	TemplateDir string
+)
+
+
 
 func main() {
 
+	LayoutPath = filepath.Join(os.Getenv("TEMPLATES_DIR"), "layout.html")
+	StaticDir = os.Getenv("STATIC_DIR")
+
 	mux := http.NewServeMux()
-	fs := http.FileServer(http.Dir("./static"))
+	fs := http.FileServer(http.Dir(StaticDirs))
 
     mux.HandleFunc("/hello", hello)
     mux.HandleFunc("/headers", headers)
