@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-	"path/filepath"	
 	"html/template"
+	"path/filepath"	
 )
 
 func hello(w http.ResponseWriter, req *http.Request) {
@@ -50,6 +50,6 @@ func headers(w http.ResponseWriter, req *http.Request) {
 func serveTemplate(w http.ResponseWriter, req *http.Request){
 	fp := filepath.Join("templates", filepath.Clean(req.URL.Path))
 
-	tmpl, _ := template.ParseFiles(lp, fp)
+	tmpl, _ := template.ParseFiles(LayoutPath, fp)
 	tmpl.ExecuteTemplate(w, "layout", nil)
 }

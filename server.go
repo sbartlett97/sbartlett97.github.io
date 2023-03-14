@@ -1,6 +1,7 @@
 package main
 
 import (
+	"path/filepath"	
     "net/http"
 	"log"
 	"os"
@@ -20,7 +21,7 @@ func main() {
 	StaticDir = os.Getenv("STATIC_DIR")
 
 	mux := http.NewServeMux()
-	fs := http.FileServer(http.Dir(StaticDirs))
+	fs := http.FileServer(http.Dir(StaticDir))
 
     mux.HandleFunc("/hello", hello)
     mux.HandleFunc("/headers", headers)
