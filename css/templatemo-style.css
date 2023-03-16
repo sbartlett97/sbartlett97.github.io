@@ -180,8 +180,8 @@ h1,h2,h3,h4,h5
 	}
 #home h1
     {
-        border: 2px solid #D43F52;
-        color: #D43F52;
+        border: 2px solid #0e5eb3;
+        color: #0e5eb3;
         display: inline-block;
         letter-spacing: 6px;
         padding: 25px 35px;
@@ -206,7 +206,7 @@ h1,h2,h3,h4,h5
     }
 #home .btn:hover
     {
-        background: #D43F52;
+        background: #0e5eb3;
         border-color: transparent;
     }
 /* end home */
@@ -230,7 +230,7 @@ h1,h2,h3,h4,h5
     {
         border: 2px solid #ffffff;
         border-radius: 50%;
-        color: #D43F52;
+        color: #0e5eb3;
         font-size: 24px;
         margin-right: 24px;
         width: 60px;
@@ -257,7 +257,7 @@ h1,h2,h3,h4,h5
 #about h4
     {
         padding: 15px 0;
-		color: #D43F52;
+		color: #0e5eb3;
     }
 #about .progress
     {
@@ -267,7 +267,7 @@ h1,h2,h3,h4,h5
     }
 #about .progress .progress-bar-danger
     {
-        background: #D43F52;
+        background: #0e5eb3;
     }
 #about .text-top
     {
@@ -305,7 +305,7 @@ h1,h2,h3,h4,h5
     }
 #portfolio .portfolio-thumb .portfolio-overlay
     {
-        background: #D43F52;
+        background: #0e5eb3;
         top: 0;
         left: 0;
         right: 0;
@@ -343,7 +343,7 @@ h1,h2,h3,h4,h5
     {
         border: 2px solid #ffffff;
         border-radius: 50%;
-        color: #D43F52;
+        color: #0e5eb3;
         width: 50px;
         height: 50px;
         line-height: 45px;
@@ -365,7 +365,7 @@ h1,h2,h3,h4,h5
     }
 #contact input[type="submit"]
     {
-        background: #D43F52;
+        background: #0e5eb3;
         border: 2px solid transparent;
         color: #ffffff;
         font-weight: bold;
@@ -374,7 +374,7 @@ h1,h2,h3,h4,h5
 #contact input[type="submit"]:hover
     {
         background: #ffffff;
-        color: #D43F52;
+        color: #0e5eb3;
     }
 /* end contact */
 
@@ -415,6 +415,6 @@ footer hr
     }
 .social-icon li a:hover
     {
-        color: #D43F52;
+        color: #0e5eb3;
     }
 /* end social icon */
