@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Samuel Bartlett — Senior AI Engineer working across LLMs, agentic systems, NLP, computer vision and ML engineering.">
+  <meta name="description" content="Samuel Bartlett — Senior AI Engineer building production agent systems you can measure, trace and trust, plus independent research on how models learn and how we evaluate them.">
   <meta name="author" content="Samuel Bartlett">
   <title>Samuel Bartlett — Senior AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <a class="brand" href="#home" aria-label="Samuel Bartlett home"><span>SB</span></a>
     <nav aria-label="Primary navigation">
       <a href="#work">Work</a>
-      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
       <a href="#experience">Experience</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -27,11 +27,11 @@
   <main>
     <section id="home" class="hero section">
       <div class="hero-copy">
-        <p class="eyebrow">SENIOR AI ENGINEER · UK</p>
-        <h1>Building AI systems<br><em>that actually run.</em></h1>
-        <p class="hero-text">I build production agent systems and AI infrastructure, with a focus on LLMs, evaluation, reliability and the engineering needed to turn models into useful software.</p>
+        <p class="eyebrow">SENIOR AI ENGINEER @ FYLD · UK</p>
+        <h1>AI agents you can<br><em>measure and trust.</em></h1>
+        <p class="hero-text">I build production agent systems — and the unglamorous infrastructure that tells you whether they actually work: tracing, evals, reliability. Outside work I run small, careful experiments on how models learn and how we evaluate them.</p>
         <div class="hero-links">
-          <a class="button" href="#projects">Explore projects <span>↓</span></a>
+          <a class="button" href="#research">Current research <span>↓</span></a>
           <a class="text-link" href="https://www.linkedin.com/in/samuel-bartlett-/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
@@ -40,9 +40,11 @@
         <div class="terminal-body">
           <p><b>$</b> whoami</p><p class="output">senior_ai_engineer</p>
           <p><b>$</b> focus</p>
-          <p class="output">production_agents<br>evaluation<br>llms<br>transformers<br>computer_vision<br>local_ai</p>
-          <p><b>$</b> status</p>
-          <p class="output">building things<br>taking them apart<br>trying to understand why<span class="cursor">_</span></p>
+          <p class="output">production_agents<br>llm_observability<br>evals<br>judge_reliability<br>architecture_research<br>interpretability</p>
+          <p><b>$</b> now</p>
+          <p class="output">self-organising-transformer: attempt 9<br>meta-eval: building the judge panel</p>
+          <p><b>$</b> policy</p>
+          <p class="output">honest numbers only<span class="cursor">_</span></p>
         </div>
       </div>
     </section>
@@ -50,43 +52,44 @@
     <section id="work" class="section content-section">
       <div class="section-heading"><span>01</span><h2>What I work on</h2></div>
       <div class="work-grid">
-        <article><span class="card-number">01</span><h3>LLMs &amp; Agentic AI</h3><p>Agents, RAG, tool use, context engineering, evaluation and orchestration — building systems around models rather than treating them as black boxes.</p><div class="tags"><span>LangGraph</span><span>LangChain</span><span>RAG</span></div></article>
-        <article><span class="card-number">02</span><h3>NLP &amp; Transformers</h3><p>Fine-tuning, embeddings, classification, translation and experimenting with model architectures to understand what is happening under the hood.</p><div class="tags"><span>PyTorch</span><span>Transformers</span><span>MLflow</span></div></article>
-        <article><span class="card-number">03</span><h3>Computer Vision</h3><p>From industrial inspection to modern vision-language models, with an interest in practical perception systems and research-driven experimentation.</p><div class="tags"><span>CV</span><span>VLMs</span><span>OCR</span></div></article>
-        <article><span class="card-number">04</span><h3>AI Engineering</h3><p>APIs, data pipelines, retrieval systems and production infrastructure that turn models and research ideas into useful software.</p><div class="tags"><span>Python</span><span>FastAPI</span><span>Elasticsearch</span></div></article>
+        <article><span class="card-number">01</span><h3>Production agents</h3><p>Agent platforms that hold up with real users: tracing on every LLM call, prompt versioning, PII masked before anything leaves the service, retries and model fallback. And deleting LLM calls that don't need to exist — if the model has no real decision to make, it's an if-statement.</p><div class="tags"><span>Google ADK</span><span>LangGraph</span><span>Langfuse</span><span>OpenTelemetry</span></div></article>
+        <article><span class="card-number">02</span><h3>Evaluation</h3><p>LLM-as-judge evaluators, golden sets and functional tests — then the awkward follow-up question: how far can you trust the thing doing the grading? I write the grader before the model.</p><div class="tags"><span>LLM-as-judge</span><span>Judge bias</span><span>Safety evals</span></div></article>
+        <article><span class="card-number">03</span><h3>Model research</h3><p>Small, controlled experiments on architecture and interpretability: dense baselines, multiple seeds, ablations. I publish the negative results too, because that's usually where the interesting part is.</p><div class="tags"><span>PyTorch</span><span>Transformers</span><span>Ablations</span><span>Interpretability</span></div></article>
+        <article><span class="card-number">04</span><h3>AI-native engineering</h3><p>Running AI coding agents like a team: specs, plans, isolated worktrees, review gates and written rules for every failure. The skill isn't typing — it's framing, delegating and verifying.</p><div class="tags"><span>Claude Code</span><span>Review gates</span><span>Specs</span></div></article>
       </div>
     </section>
 
-    <section id="projects" class="section content-section projects-section">
-      <div class="section-heading"><span>02</span><h2>Selected projects</h2><a href="https://github.com/sbartlett97?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a></div>
+    <section id="research" class="section content-section projects-section">
+      <div class="section-heading"><span>02</span><h2>Current research</h2><a href="https://github.com/sbartlett97?tab=repositories" target="_blank" rel="noopener">All repositories ↗</a></div>
       <div class="project-list">
-        <a class="project" href="https://github.com/sbartlett97/DiffVax" target="_blank" rel="noopener"><div><span class="project-type">RESEARCH · COMPUTER VISION</span><h3>DiffVax</h3><p>Optimization-free image immunization against diffusion-based editing. Uses a Nested U-Net to generate perturbations in a single forward pass.</p></div><span class="arrow">↗</span></a>
-        <a class="project" href="https://github.com/sbartlett97/electra_pytorch" target="_blank" rel="noopener"><div><span class="project-type">IMPLEMENTATION · NLP</span><h3>ELECTRA PyTorch</h3><p>An unofficial PyTorch implementation of ELECTRA, including pretraining from scratch and experiments reproducing the paper's GLUE results.</p></div><span class="arrow">↗</span></a>
-        <a class="project" href="https://github.com/sbartlett97/hands-on-gnn" target="_blank" rel="noopener"><div><span class="project-type">EXPERIMENTS · GRAPH ML</span><h3>Hands-On GNN</h3><p>Implementations and experiments covering GCN, GraphSAGE and GAT across node, link and graph-level tasks.</p></div><span class="arrow">↗</span></a>
+        <a class="project project-featured" href="https://github.com/sbartlett97/self-organising-transformer" target="_blank" rel="noopener"><div><span class="project-type">ARCHITECTURE RESEARCH · ACTIVE</span><h3>Self-Organising Transformer</h3><p>Can a Transformer learn its own structure while it learns its weights — which layers, heads, FFN groups and skip edges to keep — and end up cheaper than a dense model of the same quality?</p><p class="finding"><b>Honest status:</b> not yet. The gated models still trail a dense baseline, and I retracted an early "beats dense" result after tracing it to a library bug that broke checkpoint loading. The useful finding: a gate's size doesn't tell you how important a unit is (layer gates correlate at ρ = −0.72 with real importance; a Taylor estimate gets 0.93). Next up: a Phase 2 run (discrete birth and death of units) with a fix that stops dormant units quietly propping up the numbers.</p></div><span class="arrow">↗</span></a>
+        <a class="project" href="https://github.com/sbartlett97/meta-eval" target="_blank" rel="noopener"><div><span class="project-type">EVALUATION · SAFETY · BUILDING</span><h3>meta-eval</h3><p>A harness that measures how fine-tuning and quantisation change model safety, and evaluates the evaluators: are common LLM-as-a-judge models biased on safety-critical tasks? A self-audit already caught judges sharing weights with the models they scored. No results yet — the full judge run is next.</p></div><span class="arrow">↗</span></a>
+        <a class="project" href="https://github.com/sbartlett97/model-understanding" target="_blank" rel="noopener"><div><span class="project-type">INTERPRETABILITY · WORK IN PROGRESS</span><h3>Model Understanding</h3><p>Tools for poking at what transformers attend to and why: saliency maps, integrated gradients, logit lens and attention rollout across classification, generative and seq2seq models.</p></div><span class="arrow">↗</span></a>
+        <a class="project" href="https://github.com/sbartlett97/DiffVax" target="_blank" rel="noopener"><div><span class="project-type">COMPUTER VISION · EXTENSION</span><h3>DiffVax extension</h3><p>Extending the authors' ICLR 2026 image-immunisation method to SD3.5 and FLUX. Verification tests caught silent training bugs — severed gradient paths and an inverted loss term — that produced plausible loss curves and zero signal. Verified on CPU; GPU validation pending.</p></div><span class="arrow">↗</span></a>
       </div>
-      <p class="project-note">There are also plenty of smaller experiments around Transformers, translation, model understanding and ML tooling. Some are polished projects; others are simply me answering a technical question by writing code.</p>
+      <p class="project-note">Older experiments: <a href="https://github.com/sbartlett97/torch-electra" target="_blank" rel="noopener">ELECTRA pretraining in PyTorch</a>, <a href="https://github.com/sbartlett97/hands-on-gnn" target="_blank" rel="noopener">GNN experiments</a> and <a href="https://github.com/sbartlett97/neurosymbolic-lm" target="_blank" rel="noopener">neurosymbolic language modelling</a>. Some are polished; others are just me answering a technical question by writing code.</p>
     </section>
 
     <section id="experience" class="section content-section">
       <div class="section-heading"><span>03</span><h2>Experience</h2></div>
       <div class="timeline">
-        <article><div class="timeline-meta">2026 → present</div><div><h3>FYLD</h3><p class="role">Senior AI Engineer</p><p>Technical owner for 7 customer-facing, revenue-critical production agents. Work spans agent architecture, reliability, evaluation and performance, alongside technical leadership, mentoring and hiring. Recent optimisation reduced p50 latency from 60+ seconds to around 20 seconds and daily errors from roughly 400–600 to around 5.</p></div></article>
-        <article><div class="timeline-meta">2021 → 2026</div><div><h3>Searchlight Cyber</h3><p class="role">Engineering Manager, AI</p><p>Led a small AI team while remaining hands-on, owning AI architecture and delivery across LLM/agent workflows, NLP, computer vision and large-scale data enrichment. Built production AI workflows over 400M+ Elasticsearch records across translation, classification, sentiment, embeddings and 30+ vision models.</p></div></article>
-        <article><div class="timeline-meta">2020 → 2021</div><div><h3>Harwin</h3><p class="role">Software Developer</p><p>Developed PLC automation and computer-vision inspection workflows for high-precision manufacturing, integrating visual inspection with production-line hardware.</p></div></article>
+        <article><div class="timeline-meta">2026 → present</div><div><h3>FYLD</h3><p class="role">Senior AI Engineer</p><p>Technical owner for 7 customer-facing production agents behind a construction-safety product. I wrote the AI platform strategy in my first three weeks — trust first (observability, evals, PII), then extensibility — and have spent the months since building it. Took the platform from zero observability to full tracing, prompt versioning and LLM-as-judge evals, with PII masked before export and separate EU/US data residency. Cutting LLM calls on one agent's first message from 9–12 to 3–4 took its average response time from over a minute to about 20 seconds. Retries and multi-model fallback took daily agent errors from hundreds to single digits. I also mentor, interview and review a lot of PRs.</p></div></article>
+        <article><div class="timeline-meta">2021 → 2026</div><div><h3>Searchlight Cyber</h3><p class="role">Python Developer → Engineering Manager, AI</p><p>Built the company's AI capability from nothing: NLP and translation models, 30+ computer-vision models, and a customer-facing deep-research agent over 400M+ records, with a 28-query, 6-dimension evaluation suite to prove it worked. Scaled document throughput from ~10/s to tens of thousands per second. Then led a small AI team, before choosing to go back to hands-on technical ownership.</p></div></article>
+        <article><div class="timeline-meta">2020 → 2021</div><div><h3>Harwin</h3><p class="role">Software Programmer</p><p>Robotics PLC logic and computer-vision inspection tools for high-precision manufacturing. Rewrote the flagship inspection programme in six months: +166% machine efficiency.</p></div></article>
       </div>
     </section>
 
     <section id="about" class="section content-section about-section">
       <div class="section-heading"><span>04</span><h2>About</h2></div>
       <div class="about-grid">
-        <div><p class="large">Software engineer turned AI engineer, with a habit of going one layer deeper than strictly necessary.</p><p>I studied Software Engineering at the University of Portsmouth and started out building automation and computer-vision systems. Since then I've moved through ML engineering into LLMs, agents and production AI systems.</p><p>I like hard technical problems, weird side projects, learning how things work under the hood, and turning half-formed ideas into something that actually runs.</p></div>
-        <aside><p class="mono-label">CURRENT TOOLBOX</p><div class="toolbox"><span>Python</span><span>PyTorch</span><span>Transformers</span><span>LangGraph</span><span>LangChain</span><span>LangSmith</span><span>FastAPI</span><span>MLflow</span><span>Elasticsearch</span><span>Docker</span><span>Git</span></div><p class="mono-label second">INCREASINGLY</p><div class="toolbox"><span>Local LLMs</span><span>VLMs</span><span>MoE</span><span>RAG</span><span>Agentic AI</span></div></aside>
+        <div><p class="large">Software engineer turned AI engineer, with a habit of going one layer deeper than strictly necessary.</p><p>I studied Software Engineering at the University of Portsmouth and started out on automation and computer vision. From there I moved through ML engineering into LLMs, agents and production AI — and spent a stint managing an AI team before deciding I wanted my hands back on the hard problems.</p><p>What I care about: evidence over assertion, simple systems, honest numbers, and using code when the model has no real decision to make. Increasingly, that means evaluation — most people can build an agent, fewer can tell you how much to trust the thing that grades it.</p></div>
+        <aside><p class="mono-label">CURRENT TOOLBOX</p><div class="toolbox"><span>Python</span><span>PyTorch</span><span>Transformers</span><span>Google ADK</span><span>LangGraph</span><span>Langfuse</span><span>OpenTelemetry</span><span>FastAPI</span><span>Elasticsearch</span><span>Docker</span></div><p class="mono-label second">INCREASINGLY</p><div class="toolbox"><span>LLM-as-judge</span><span>Safety evals</span><span>Interpretability</span><span>llama.cpp</span><span>Local LLMs</span></div></aside>
       </div>
     </section>
 
     <section id="contact" class="section contact-section">
-      <p class="eyebrow">LET'S BUILD SOMETHING</p>
-      <h2>Have an interesting<br><em>AI problem?</em></h2>
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2>Want to talk evals, agents or<br><em>research that didn't work?</em></h2>
       <div class="contact-links"><a href="mailto:sam.bartlett858@gmail.com">sam.bartlett858@gmail.com</a><a href="https://www.linkedin.com/in/samuel-bartlett-/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/sbartlett97" target="_blank" rel="noopener">GitHub ↗</a></div>
     </section>
   </main>
